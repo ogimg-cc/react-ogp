@@ -1,0 +1,42 @@
+{
+  "name": "react-ogp",
+  "version": "0.9.0",
+  "description": "ogimg.cc react",
+  "main": "./dist/index.js",
+  "repository": "https://github.com/ogimg-cc/react-ogp",
+  "author": "ogigm.cc",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc -w",
+    "lint": "eslint src/** --ext .ts,.tsx --no-error-on-unmatched-pattern",
+    "lint-staged": "lint-staged",
+    "format": "prettier --config .prettierrc.yaml --write '**/*.{tsx,ts}' --loglevel silent",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "*.{js,ts,jsx,tsx}": [
+      "npx prettier --config .prettierrc.yaml -write . --loglevel silent",
+      "npx eslint --no-error-on-unmatched-pattern"
+    ]
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.25",
+    "@types/react-dom": "^18.0.8",
+    "@typescript-eslint/eslint-plugin": "^5.0.0",
+    "eslint": "^8.0.1",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-config-standard-with-typescript": "^23.0.0",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-n": "^15.0.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-react": "^7.31.10",
+    "husky": "^8.0.2",
+    "lint-staged": "^13.0.3",
+    "prettier": "^2.7.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "typescript": "*"
+  }
+}
